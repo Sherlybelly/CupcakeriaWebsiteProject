@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Midterm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="#main" class="skip-link"></a>
+
+    <div class="wrapper">
+
+        <header>
+            <img src="images/02.jpg" alt="A cupcake with pink frosting decorated with white sprinkles, displayed against a clean white background. This image is the logo that represents the CUPECAKERIA brand.">
+            <div class="titlecontainer">
+                <h2>CUPCAKERIA</h2>
+            </div>
+        </header>
+
+        <main id="main" role="main" tabindex="-1">
+            <h2>TRY OUR DESSERTS BELOW!</h2>
+
+            <div class="box">
+                <div class="slider">
+                    <img src="images/06.jpg" alt="A golden sponge cake slice layered with whipped cream and fresh strawberries, topped with a mint leaf garnish. It's presented on a white plate in a bright kitchen setting with baking ingredients visible in the background">
+                    <img src="images/07.jpg" alt="Tiramisu cake with chocolate powder dusting on top, featuring a slice cut out to reveal layers of cream and sponge cake,">
+                    <img src="images/08.jpg" alt="Strawberry parfait dessert in a clear glass with layers of vanilla frosting, cake pieces, and fresh strawberries, displayed against a red background in a red background with an elegant, appetizing presentation">
+                    <img src="images/09.jpg" alt="Dubai Chocolate bar with pistachio pieces broken into segments, displayed on a white marble surface surrounded by crushed pistachios.">
+                </div>
+            </div>
+
+            <div class="buttonRelative">
+                <a href="gallery.html">ORDER HERE </a>
+            </div>
+        </main>
+
+        <div class="buttonAbsolute"></div>
+
+        <nav id="nav" role="navigation">
+            <div class="titlecontainer">
+                <h2>NAVIGATION BAR</h2>
+            </div>
+            <ul id="navList" class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button id="navBtn" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation">Read Less</button>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#navBtn").click(function () {
+                        $("#navList li").toggle("slow", function () {
+                            var expanded = $("#navList li").is(":visible") ? "true" : "false";
+                            $("#navBtn").attr("aria-expanded", expanded);
+                            if (expanded === "true") {
+                                $("#navBtn").text("Read less");
+                            } else {
+                                $("#navBtn").text("Read more");
+                            }
+                        });
+                    });
+                });
+            </script>
+        </nav>
+
+        <aside id="sources" role="complementary">
+            <div class="titlecontainer">
+                <h2>Sources</h2>
+            </div>
+            <ul id="sourcesList" class="container">
+                <li><a href="https://ohmyfacts.com/food-beverage/25-facts-about-desserts/" target="_blank" rel="noopener noreferrer">25 Dessert Facts</a></li>
+                <li><a href="https://stackoverflow.com/questions/46264684/image-slider-keyframing-in-css" target="_blank" rel="noopener noreferrer">IMG Slider Reference</a></li>
+                <li><a href="https://www.sublimedesserts.com/about-us/" target="_blank" rel="noopener noreferrer">Our Competitor</a></li>
+                <li><a href="https://drive.google.com/file/d/16o_cDTAcRc2VqIeyYCynu_ESHWCCpGCR/view?pli=1" target="_blank" rel="noopener noreferrer">Read More/Less jQuery</a></li>
+                <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank" rel="noopener noreferrer">HTML Forms Reference</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank" rel="noopener noreferrer">HTML Web Storage</a></li>
+                <li><a href="https://www.w3schools.com/js/js_events.asp" target="_blank" rel="noopener noreferrer">HTML Events (click button)</a></li>
+                <li><a href="https://www.w3schoolsapp.com/jsref/met_win_settimeout.html" target="_blank" rel="noopener noreferrer">setTimeout Reference</a></li>
+                <li><a href="https://thecodingtrain.com/tracks/code-programming-with-p5-js/code/7-arrays/upload-editor" target="_blank" rel="noopener noreferrer">p5js animation</a></li>
+                <li><a href="https://p5js.org/reference/#/p5.Element/style" target="_blank" rel="noopener noreferrer">Z index</a></li>
+            </ul>
+            <button id="sourcesBtn" aria-expanded="false" aria-controls="sourcesList" aria-label="Toggle sources">Read Less</button>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#sourcesBtn").click(function () {
+                        $("#sourcesList li").toggle("slow", function () {
+                            var expanded = $("#sourcesList li").is(":visible") ? "true" : "false";
+                            $("#sourcesBtn").attr("aria-expanded", expanded);
+                            if (expanded === "true") {
+                                $("#sourcesBtn").text("Read less");
+                            } else {
+                                $("#sourcesBtn").text("Read more");
+                            }
+                        });
+                    });
+                });
+            </script>
+        </aside>
+
+        <footer>
+            <h2>Follow Us</h2>
+            <ul class="followus">
+                <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">Twitter 🐦</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook 📘</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram 📸</a></li>
+            </ul>
+            <p class="credit">Made by Xueyu Lin</p>
+            <p class="copyright">&#169; 2025 Sherlybelly. All rights reserved.</p>
+
+            <form id="subscribeForm" role="form">
+                <label for="fullname" class="sr-only">Name</label>
+                Name: <input type="text" id="fullname" name="fullname"><br>
+                <label for="email" class="sr-only">Email</label>
+                Email: <input type="email" id="email" name="email"><br>
+                <button id="btnRun" type="button" aria-label="Subscribe to updates">Subscribe</button>
+                <span id="msg" aria-live="polite"></span>
+            </form>
+        </footer>
+
+        <script src="p5js/p5.js"></script>
+        <script src="p5js/cursorSketch.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
